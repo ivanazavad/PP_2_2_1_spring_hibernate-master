@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn
+    @JoinColumn(name = "carId", referencedColumnName = "id")
     private Car car;
 
    @Id
